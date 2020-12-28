@@ -40,7 +40,7 @@ def handle_message(event):
     msg = event.message.text
     reply = '抱歉我還沒做好這部分'
 
-    if msg = '生日卡片':
+    if msg == '生日卡片':
         reply = '...'
 
     line_bot_api.reply_message(
