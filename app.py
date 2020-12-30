@@ -40,7 +40,6 @@ def handle_message(event):
     msg = event.message.text
     reply = '抱歉我還沒做好這部分，歡迎跟白鈞元說。'
     
-
     if '功能' in msg:
         reply = '1.生日卡片\n2.北極熊(後面加上編號1到4)'
     elif msg == '生日卡片':
