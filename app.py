@@ -48,10 +48,9 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=reply))
 
-    if msg == '生日卡片':
-        line_bot_api.reply_message(
-            event.reply_token,
-            StickerSendMessage(package_id='3', sticker_id='257'))
+    line_bot_api.reply_message(
+        event.reply_token,
+        StickerSendMessage(package_id='3', sticker_id='257'))
 
 
 
