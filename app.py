@@ -45,10 +45,10 @@ def handle_message(event):
 
     if msg == '北極熊':
         image_message = ImageSendMessage(
-            original_content_url='https://s.yimg.com/ny/api/res/1.2/3QLYhau.SJMgY7YyRn9TFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2020-10/42c22820-1821-11eb-97fe-a8b44e98b81c',
-            preview_image_url='https://s.yimg.com/ny/api/res/1.2/3QLYhau.SJMgY7YyRn9TFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2020-10/42c22820-1821-11eb-97fe-a8b44e98b81c'
+            original_content_url='https://s.yimg.com/ny/api/res/1.2/3QLYhau.SJMgY7YyRn9TFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2020-10/42c22820-1821-11eb-97fe-a8b44e98b81c/original.jpg',
+            preview_image_url='https://s.yimg.com/ny/api/res/1.2/3QLYhau.SJMgY7YyRn9TFw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2020-10/42c22820-1821-11eb-97fe-a8b44e98b81c/preview.jpg'
         )
-        
+
         line_bot_api.reply_message(
         event.reply_token,
         image_message)
