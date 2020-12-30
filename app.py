@@ -40,11 +40,11 @@ def handle_message(event):
     msg = event.message.text
     reply = '抱歉我還沒做好這部分，歡迎跟白鈞元說。'
     
-    if msg == '生日卡片':
-        reply = '我的小餛飩王子瑄寶貝22歲生日快樂!!!今年真是辛苦你了，遇到了好多事情，你每次都跟我說覺得我很辛苦要一直照顧你甚麼的，但其實你自己也幫了我很多忙，像是教程的課還有教學實習的部分，那些沒有你我是絕對不知道要怎麼辦，而且你也時常在生活中聽我抱怨事情、也會在我心情不好的時候安慰我聽我說，所以不要太自責或給自己太大的壓力，不用想著要自己快點好起來，這種事情不是你自己能控制的，平常日上課的時候就由我來陪著你，假日的時候就回桃園好好休息、好好運動。最困難的21歲跟2020都一起過去了，新的一年我會繼續陪著你，一切一定會越來越好的，我相信你!你也要相信自己! 最後不用特別祝福甚麼，只祝福你在新的一年可以好好生活、好好吃飯、好好睡覺、我們繼續好好在一起<3'        
 
     if '功能' in msg:
         reply = '1.生日卡片\n2.北極熊(後面加上編號1到4)'
+    elif msg == '生日卡片':
+        reply = '我的小餛飩王子瑄寶貝22歲生日快樂!!!\n今年真是辛苦你了，遇到了好多事情，你每次都跟我說覺得我很辛苦要一直照顧你甚麼的，但其實你自己也幫了我很多忙，像是教程的課還有教學實習的部分，那些沒有你我是絕對不知道要怎麼辦，而且你也時常在生活中聽我抱怨事情、也會在我心情不好的時候安慰我聽我說，所以不要太自責或給自己太大的壓力，不用想著要自己快點好起來，這種事情不是你自己能控制的，平常日上課的時候就由我來陪著你，假日的時候就回桃園好好休息、好好運動。\n最困難的21歲跟2020都一起過去了，新的一年我會繼續陪著你，一切一定會越來越好的，我相信你!你也要相信自己! 最後不用特別祝福甚麼，只祝福你在新的一年可以好好生活、好好吃飯、好好睡覺、我們繼續好好在一起<3'        
 
     if msg == '北極熊1':
         image_message = ImageSendMessage(
@@ -55,8 +55,7 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         image_message)
-
-    if msg == '北極熊2':
+    elif msg == '北極熊2':
         image_message = ImageSendMessage(
             original_content_url='https://hk.appledaily.com/resizer/bOSC4LbLyBaDCl5ctgmWU40hGik=/720x0/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/TWANNPPS45BA3NOQT5VX3OVGUE.jpg',
             preview_image_url='https://hk.appledaily.com/resizer/bOSC4LbLyBaDCl5ctgmWU40hGik=/720x0/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/TWANNPPS45BA3NOQT5VX3OVGUE.jpg'
@@ -65,8 +64,7 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         image_message)
-
-    if msg == '北極熊3':
+    elif msg == '北極熊3':
         image_message = ImageSendMessage(
             original_content_url='https://n.sinaimg.cn/spider2020227/533/w800h533/20200227/8f38-ipzreiw8266715.jpg',
             preview_image_url='https://n.sinaimg.cn/spider2020227/533/w800h533/20200227/8f38-ipzreiw8266715.jpg'
@@ -75,8 +73,7 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         image_message)
-
-    if msg == '北極熊4':
+    elif msg == '北極熊4':
         image_message = ImageSendMessage(
             original_content_url='https://petsmao-media.nownews.com/images/2019/12/372887e9-1576832623-de044bf41be1645832b20120e2efb02f.jpg',
             preview_image_url='https://petsmao-media.nownews.com/images/2019/12/372887e9-1576832623-de044bf41be1645832b20120e2efb02f.jpg'
