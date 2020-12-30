@@ -66,6 +66,30 @@ def handle_message(event):
         event.reply_token,
         image_message)
 
+    if msg == '北極熊3':
+        image_message = ImageSendMessage(
+            original_content_url='https://n.sinaimg.cn/spider2020227/533/w800h533/20200227/8f38-ipzreiw8266715.jpg',
+            preview_image_url='https://n.sinaimg.cn/spider2020227/533/w800h533/20200227/8f38-ipzreiw8266715.jpg'
+        )
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        image_message)
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=reply))
+
+    if msg == '北極熊4':
+        image_message = ImageSendMessage(
+            original_content_url='https://petsmao-media.nownews.com/images/2019/12/372887e9-1576832623-de044bf41be1645832b20120e2efb02f.jpg',
+            preview_image_url='https://petsmao-media.nownews.com/images/2019/12/372887e9-1576832623-de044bf41be1645832b20120e2efb02f.jpg'
+        )
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        image_message)
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=reply))
